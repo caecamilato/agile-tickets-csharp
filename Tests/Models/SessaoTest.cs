@@ -11,6 +11,15 @@ namespace Tests.Models
     public class SessaoTest
     {
         [Test]
+        public void DeveVender1IngressoSeHa1Vagas()
+        {
+            Sessao sessao = new Sessao();
+            sessao.TotalDeIngressos = 1;
+
+            Assert.IsTrue(sessao.PodeReservar(1));
+        }
+
+        [Test]
         public void DeveVender1IngressoSeHa2Vagas()
         {
             Sessao sessao = new Sessao();
