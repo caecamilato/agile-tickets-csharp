@@ -55,6 +55,19 @@ namespace AgileTickets.Web.Models
             else return false;
         }
 
+        //public virtual bool Vagas(int qtd, int min)
+        //{
+
+        //    int totDisp = 0;
+
+        //    foreach (var s in Sessoes)
+        //    {
+        //        if (min > s.IngressosDisponiveis) totDisp += s.IngressosDisponiveis;
+        //    }
+
+        //    return totDisp >= qtd;
+        //}
+
         public virtual bool Vagas(int qtd)
         {
             // ALUNO: Não apague esse metodo. Esse sim será usado no futuro! ;)
@@ -68,5 +81,17 @@ namespace AgileTickets.Web.Models
             if (totDisp >= qtd) return true;
             else return false;
         }
+
+        //public virtual bool Vagas(int qtd)
+        //{
+        //    int totDisp = 0;
+
+        //    foreach (Sessao s in Sessoes)
+        //    {
+        //        totDisp += s.IngressosDisponiveis;
+        //    }
+
+        //    return totDisp >= qtd;
+        //}
     }
 }
